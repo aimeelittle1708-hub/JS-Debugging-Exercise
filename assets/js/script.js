@@ -50,6 +50,7 @@ function buttonClicked() {
         messageElement.textContext = 'Your guess is low';
         remainingGuesses.textContent = guessesLeft;
         messageElement.style.color = '#333';
+    }
 
         // If the input value is not within the range of 1 to 99
      else {
@@ -63,7 +64,7 @@ function buttonClicked() {
     if (guesses == 0) {
         //Update check button, disable input, and clear input value.
         // Update guessed number text and color to indicate user loss.
-        checkButton.textContent = "Replay';
+        checkButton.textContent = "Replay";
         inputElement.disabled = true;
         inputValue = '';
         messageElement.textContent = 'You lost the game';
