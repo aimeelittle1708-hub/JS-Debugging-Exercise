@@ -23,7 +23,7 @@ function buttonClicked() {
         window.location.reload();
     }
     // Decrement the chance variable on every click
-    guessesLeft++;
+    guessesLeft--;
 
     // Get the value from the input field
     let inputValue = inputElement.value;
