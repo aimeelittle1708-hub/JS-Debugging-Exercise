@@ -14,7 +14,7 @@ let randomNumber = Math.floor(Math.random() * 100);
 let guessesLeft = 10;
 
 // Listen for the click event on the check button
-checkButton.addEventListener('click', btnClicked);
+checkButton.addEventListener('click', buttonClicked);
 
 // process the button clicked event
 function buttonClicked() {
