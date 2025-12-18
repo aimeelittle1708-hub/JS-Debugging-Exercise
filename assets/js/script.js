@@ -28,14 +28,13 @@ function buttonClicked() {
     // Get the value from the input field
     let inputValue = inputElement.value;
 
-    // Check if the input value is equal to the random number
-    if (Number(inputValue) === randomNumber) {
-        // Update guessed number, disable input, check button text and color.
-        messageElement.textContent = `Congratulations - ${inputValue} is correct!`;
-        inputElement.disabled = true;
-        messageElement.style.fontWeight = 'bold';
-        checkButton.textContent = 'Replay';
-        messageElement.style.color = 'green';
+// Check if the input value is equal to the random number
+if (Number(inputValue) === randomNumber) {
+    messageElement.textContent = `Congratulations - ${inputValue} is correct!`;
+    inputElement.disabled = true;
+    messageElement.style.fontWeight = 'bold';
+    checkButton.textContent = 'Replay';
+    messageElement.style.color = 'green';
 
 } else if (inputValue > randomNumber && inputValue < 100) {
     messageElement.textContent = 'Your guess is high';
@@ -46,14 +45,13 @@ function buttonClicked() {
     messageElement.textContent = 'Your guess is low';
     remainingGuesses.textContent = guessesLeft;
     messageElement.style.color = '#333';
+
+} else {
+    // If the input value is not within the range of 1 to 99
+    messageElement.textContent = 'Your number is invalid';
+    remainingGuesses.textContent = guessesLeft;
+    messageElement.style.color = '#DE0611';
 }
-        // If the input value is not within the range of 1 to 99
-    } else {
-        // Update the guessed number text, color and remaining chances
-        messageElement.textContent = 'Your number is invalid';
-        remainingGuesses.textContent = guessesLeft;
-        messageElement.style.color = '#DE0611';
-    }
 
     // Check if the chance is zero
     if (guessesLeft == 0) {
@@ -73,4 +71,4 @@ function buttonClicked() {
     // Set the focus on input field
     inputElement.focus();
     inputElement.value = '';
-
+}
