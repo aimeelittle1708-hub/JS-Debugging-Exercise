@@ -56,7 +56,7 @@ function buttonClicked() {
     }
 
     // Check if the chance is zero
-    if (guesses == 0) {
+    if (guessesLeft == 0) {
         //Update check button, disable input, and clear input value.
         // Update guessed number text and color to indicate user loss.
         checkButton.textContent = "Replay";
